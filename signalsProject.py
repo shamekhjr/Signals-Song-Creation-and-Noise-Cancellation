@@ -1,8 +1,9 @@
 """
-Signals Project Milestone 1&2
+Signals Project 
+Song Creation and Noise Cancellation
 Code Authors:
-Mohamed Tarek Shamekh 52-0989
-Omar Sayed Nour 52-2179
+Mohamed Tarek Shamekh 
+Omar Sayed Nour
 T20
 Supervised by: Eng. Maha El-Feshawy
 """
@@ -12,8 +13,6 @@ import matplotlib.pyplot as plt
 import sounddevice as sd
 from scipy.fftpack import fft
 from time import sleep
-
-#Milestone 1
 
 # fi is right hand frequency
 # Fi is left hand frequency
@@ -36,8 +35,6 @@ x = np.sin(2 * np.pi * F * t) + np.sin(2 * np.pi * f * t) #x(t) (No Noise)
 sd.play(x, 3 * 1024) #Sound without noise
 
 sleep(4)
-
-#Milestone 2
 
 N = 3*1024 #setting the number of samples to duration of song
 freq = np.linspace(0, 512, int(N/2)) #creating the frequency vector
@@ -75,7 +72,7 @@ x_filtered_f = fft(x_filtered)
 x_filtered_f = 2/N * np.abs(x_filtered_f [0:int(N/2)])
 sd.play(x_filtered,3*1024) #Sound with noise removed
 
-"""""
+
 plt.figure()
 plt.plot(t,x) #Time Domain Signal (No Noise)
 plt.title ('Time Domain Signal (Without Noise)')
@@ -111,7 +108,7 @@ plt.plot(freq,x_filtered_f) #Frequency Domain Signal (Noise Removed)
 plt.title ('Frequency Domain Signal (Noise Removed)')
 plt.xlabel ('Frequency (Hz)')
 plt.ylabel ('Magnitude')
-"""
+
 plt.figure()
 plt.subplot(3,1,1)
 plt.plot(t,x) #Time Domain Signal (No Noise)
