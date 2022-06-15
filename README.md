@@ -30,7 +30,7 @@ with fn1 and fn2 being the two randomly picked frequencies. We then added the ab
 
 ![singal with noise equation](https://snipboard.io/FGqhRH.jpg)
 
-Applying the previous formula on the signal we created in the previous step gives us the following signal which was ploted using the plot function from the matplotlib library:
+Applying the previous formula on the signal we created in the previous step gives us the following signal which was ploted using the ```plot``` function from the ```matplotlib``` library:
 
 ![Time Domain Signal With Noise](https://snipboard.io/heOKP1.jpg)
 
